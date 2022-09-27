@@ -12,6 +12,7 @@ const credentials = {
 
 // Create S3 service object
 const s3 = new S3({
+  credentials: isLocal ? credentials : undefined,
   region: 'ap-southeast-1',
   endpoint: isLocal ? 'http://localhost:4566' : undefined //uses the default AWS endpoint when undefined
 });
