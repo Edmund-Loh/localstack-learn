@@ -10,7 +10,7 @@ export const run = async () => {
     console.log('Success', data);
     return data; // For unit tests.
   } catch (err) {
-    console.log("Error", err);
+    console.log('Error', err);
   }
 };
 run();

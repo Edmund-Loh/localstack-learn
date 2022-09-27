@@ -1,8 +1,8 @@
 // Import required AWS SDK clients and commands for Node.js.
-import {s3} from "./s3Config.js";
-import {PutObjectCommand} from "@aws-sdk/client-s3";
-import {basename} from "path";
-import {createReadStream} from "fs";
+import {s3} from './s3Config.js';
+import {PutObjectCommand} from '@aws-sdk/client-s3';
+import {basename} from 'path';
+import {createReadStream} from 'fs';
 
 const file = './uploads/testfile.txt'; // Path to and name of object. For example '../myFiles/index.js'.
 const fileStream = createReadStream(file);
@@ -21,10 +21,10 @@ export const uploadParams = {
 export const run = async () => {
   try {
     const data = await s3.send(new PutObjectCommand(uploadParams));
-    console.log("Success", data);
+    console.log('Success', data);
     return data; // For unit tests.
   } catch (err) {
-    console.log("Error", err);
+    console.log('Error', err);
   }
 };
 

@@ -1,4 +1,4 @@
-import {S3} from "@aws-sdk/client-s3";
+import {S3} from '@aws-sdk/client-s3';
 
 const isLocal = process.env.ENVIRONMENT === 'PROD' ? false : true;
 
