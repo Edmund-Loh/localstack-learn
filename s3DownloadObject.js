@@ -31,7 +31,7 @@ export const run = async () => {
     console.log(bodyContents);
 
     // Write to a file on local
-    writeFileSync('./downloads/textfile.txt',`${bodyContents}\n`,{flag: 'a'})
+    writeFileSync('./downloads/textfile.txt',`${bodyContents}\n`,{flag: 'a+'})
 
     return bodyContents;
 
